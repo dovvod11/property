@@ -8,6 +8,8 @@ dotenv.config();
 // Initialize Express
 const app = express();
 
+//check data?
+
 // Middleware to parse JSON bodies
 app.use(express.json());
 
