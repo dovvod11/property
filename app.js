@@ -19,8 +19,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 .catch(err => console.log(err));
 
 const authRouter = require('./router/auth');
+const propertyRouter = require('./router/property');
 
 app.use('/api/auth', authRouter);
+app.use('/api/property',propertyRouter);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
